@@ -1,0 +1,66 @@
+
+
+## Alias configuration
+#
+# expand aliases before completing
+#
+setopt complete_aliases     # aliased ls needs if file/dir completions work
+
+# hub alias
+eval "$(hub alias -s)"
+
+alias where="command -v"
+alias j="jobs -l"
+
+case "${OSTYPE}" in
+freebsd*|darwin*)
+    alias ls="ls -G -w"
+    ;;
+linux*)
+    alias ls="ls --color"
+    ;;
+esac
+
+alias la="ls -a"
+alias lf="ls -F"
+alias ll="ls -al"
+
+alias du="du -h"
+alias df="df -h"
+
+alias su="su -l"
+
+alias machikoe="cd /Users/joo/dev/git/machikoe"
+alias home="cd /Users/joo/dev/git/palette"
+alias palette="cd /Users/joo/dev/git/palette"
+alias oyacafe="cd /Users/joo/dev/git/oyacafe"
+alias intra="cd /Users/joo/dev/git/ams"
+alias dc="docker-compose"
+alias dkhome="cd /Users/joo/dev/git/dks"
+alias dks="cd /Users/joo/dev/git/dks"
+alias guide="cd /Users/joo/dev/git/guide"
+alias denki="cd /Users/joo/dev/git/elec"
+alias lp="cd /Users/joo/dev/git/palette-lp"
+
+
+alias display_dot_file_finder="defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder"
+alias hide_dot_file_finder="defaults delete com.apple.finder AppleShowAllFiles; killall Finder"
+
+# tmuxが起動していない場合にalias設定を行う
+if [ $SHLVL = 1 ]; then
+  # tmuxにセッションがなかったら新規セッションを立ち上げた際に分割処理設定を読み込む
+  alias newtmux="tmux -2 attach || tmux -2 new-session \; source-file ~/.tmux/new-session"
+fi
+
+alias tmux-copy='tmux save-buffer - | pbcopy'
+
+if [ -n "$TMUX" ]; then
+  alias pbcopy="reattach-to-user-namespace pbcopy"
+fi
+
+# Google Chrome Mac 
+# https://developers.google.com/web/updates/2017/04/headless-chrome?hl=ja
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+

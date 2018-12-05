@@ -1,0 +1,20 @@
+[user]
+	name = Hiroshige Jono
+	email = joo@palette.cloud
+[alias]
+	mg = merge
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	st = status
+	d = difftool
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  graph = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(red)%d%Creset\"
+[core]
+	pager = LESSCHARSET=utf-8 less
+[tig "bind"]
+  generic = g move-first-line
+  generic = G move-last-line
+[color]
+	ui = true
