@@ -15,6 +15,7 @@ fi
 
 brew tap homebrew/versions
 brew tap caskroom/fonts
+brew cask upgrade
 brew update
 brew upgrade --all
 
@@ -29,6 +30,7 @@ apps=(
     hub
     rbenv
     pyenv
+    tmux
 )
 
 caskapps=(
@@ -36,12 +38,12 @@ caskapps=(
     adobe-acrobat-reader
     karabiner-elements
     visual-studio-code
-    google-chrome
+#    google-chrome
     google-japanese-ime
     iterm2
     docker
     slack
-    virtualbox
+    vagrant
     postman
     coteditor
 )

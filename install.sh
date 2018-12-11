@@ -13,6 +13,8 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # sync dot file to home directory
 function deploy() {
     rsync -r .zshrc \
+        .vim \
+        .vimrc \
         .aliases \
         .tmux.conf \
         .tmux \
