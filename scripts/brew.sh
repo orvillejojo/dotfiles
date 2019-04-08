@@ -31,6 +31,7 @@ apps=(
     rbenv
     pyenv
     tmux
+    reattach-to-user-namespace
 )
 
 caskapps=(
