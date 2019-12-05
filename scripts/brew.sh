@@ -27,6 +27,7 @@ apps=(
     golang
     gzip
     zsh
+    git
     hub
     rbenv
     pyenv

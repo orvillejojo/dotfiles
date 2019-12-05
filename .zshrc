@@ -20,12 +20,12 @@ export DINGHY_GUEST_MOUNT_DIR=/Users/joo/dev/git
 # for Android SDK
 # ------------------------------
 export ANDROID_SDK_ROOT=/Users/joo/Library/Android/sdk
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 
 
 # rbenv設定
-export PATH="${JAVA_HOME}/bin:/usr/local/opt/openssl/bin:/usr/local:./node_modules/.bin:$HOME/.nodebrew/current/bin:$ANDROID_SDK_ROOT/platform-tools:$HOME/bin:$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/local/bin:${JAVA_HOME}/bin:/Users/joo/Library/Python/2.7/bin:/usr/local/opt/openssl/bin:/usr/local:./node_modules/.bin:$HOME/.nodebrew/current/bin:$ANDROID_SDK_ROOT/platform-tools:$HOME/bin:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 

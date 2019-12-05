@@ -13,6 +13,10 @@
   graph = log --graph --date=short --pretty=\"format:%C(yellow)%h %C(cyan)%ad %C(green)%an%Creset%x09%s %C(red)%d%Creset\"
 [core]
 	pager = LESSCHARSET=utf-8 less
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
 [tig "bind"]
   generic = g move-first-line
   generic = G move-last-line
